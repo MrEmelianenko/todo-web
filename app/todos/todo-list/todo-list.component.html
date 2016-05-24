@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="todo-list">
+      <div *ngFor="let todo of todos" class="todo-list-item">
+        <todo-list-item [todo]="todo" (todoUpdate)="onUpdateTodo($event)" (todoDelete)="onDeleteTodo($event)"></todo-list-item>
+      </div>
+
+      <todo-list-add (todoCreate)="onCreateTodo($event)"></todo-list-add>
+    </div>
+  </div>
+</div>

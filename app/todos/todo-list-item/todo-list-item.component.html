@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col s9">
+    <input [(ngModel)]="todo.text" (blur)="changeText()" [disabled]="todo.isUpdating">
+  </div>
+  <div class="col s2">
+    <button (click)="changeDone(true)" *ngIf="!todo.done" [disabled]="todo.isUpdating" class="btn">Done</button>
+    <button (click)="changeDone(false)" *ngIf="todo.done" [disabled]="todo.isUpdating" class="btn">Undone</button>
+  </div>
+  <div class="col s1">
+    <button (click)="deleteTodo()" [disabled]="todo.isUpdating" class="btn red">&times;</button>
+  </div>
+  <div class="col s9">
+    <small>by <a href="#" [userTooltip]="todo.user">{{todo.user.getFullName()}}</a></small>
+  </div>
+</div>

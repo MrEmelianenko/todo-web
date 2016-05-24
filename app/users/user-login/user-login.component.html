@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col s4 offset-s4">
+    <h1>Sign In</h1>
+
+    <form (ngSubmit)="onSubmit()">
+      <input [(ngModel)]="email" type="text" placeholder="Email" class="form-control" required>
+      <input [(ngModel)]="password" type="password" placeholder="Password" class="form-control" required>
+      <input type="submit" value="Login" class="btn btn-primary">
+    </form>
+  </div>
+</div>

@@ -1,2 +1,8 @@
-.todo-list {}
-.todo-list-item {}
+.main-loader {
+  text-align: center;
+  margin: 200px auto;
+}
+
+.todo-list {
+  margin: 50px 0 0;
+}

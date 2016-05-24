@@ -1,9 +1,10 @@
 <html>
 <head>
-  <title>Angular 2</title>
+  <base href="/">
+  <title>Awesome TODO</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 
   <script src="node_modules/es6-shim/es6-shim.min.js"></script>
@@ -11,20 +12,31 @@
   <script src="node_modules/reflect-metadata/Reflect.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="systemjs.config.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>-->
   <script>
-    System.import('app').catch(function (err) {
-      console.error(err);
+    System.import('app').catch(function(error) {
+      console.error(error);
     });
   </script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <todo-app>Loading...</todo-app>
+  <todo-app>
+    <div class="main-loader">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </todo-app>
 </body>
 </html>

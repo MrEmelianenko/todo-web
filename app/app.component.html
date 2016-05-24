@@ -1,0 +1,17 @@
+<nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <a [routerLink]="['/']" class="brand-logo center">AweTodo</a>
+
+      <user-nav *ngIf="auth.loggedIn()"></user-nav>
+
+      <ul class="right" *ngIf="!auth.loggedIn()">
+        <li><a [routerLink]="['/sign-in']">Sign In</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
